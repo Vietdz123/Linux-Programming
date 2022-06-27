@@ -1,0 +1,1 @@
+cmd_/home/wibu/working_space/git/Linux_Programming/Bai12-CharacterDivice-IoctDiviceDriver/02_create-device-file/main.mod := { echo  /home/wibu/working_space/git/Linux_Programming/Bai12-CharacterDivice-IoctDiviceDriver/02_create-device-file/main.o;  echo; } > /home/wibu/working_space/git/Linux_Programming/Bai12-CharacterDivice-IoctDiviceDriver/02_create-device-file/main.mod
