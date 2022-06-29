@@ -12,23 +12,23 @@
 
 > - Để tạo thread mới dùng hàm *int pthread_create(pthread_t * threadID, const pthread_attr_t *attr, void *(*start_routine)(void *), void *restrict arg);*. 
 >   - Trả về 0 nếu thành công. Khác 0 là thất bại.
-<br>
+>
 > - So sánh 2 *structue* của 2 thread ta có 2 hàm:
 >   - *pthread_t pthread_self(void)*:
 >       - Trả về ThreadID của thread đang gọi tới hàm pthread_self()
 >   - *int pthread_equal(pthread_t t1, pthread_t t2)*;
 >       - Trả về 0 nếu t1 khác t2, khác 0 nếu t1 = t2.
-<br>
+>
 > - Để kết thúc 1 thread: 
 >   - *int pthread_exit(void *retval)***:
 >       - *retval*: Giá trị trả về khi kết thúc thread.
 >       - Giá trị retval này có thể thu được vởi 1 thread khác thông qua *int pthread_join(pthread_t thread, void **retval);***
 >       - Trả về 0 nếu thành công, < 0 nếu thất bại.
-> <br>
+> 
 >   - *int pthread_cancel(pthread_t thread):*
 >       - pthread_cancel() gửi 1 yêu cầu kết thúc tới 1 thread cụ thể.
 >       - Trả về 0 nếu thành công, < 0 nếu thất bại
-<br>
+>
 > - Để thu được giá trị kết thúc của 1 thread ta sử dụng hàm:
 >   - *int pthread_join(pthread_t thread, void **retval);***
 >       - pthread_join() sẽ block cho đến khi thread ta truyền vào kết thúc. Nếu thread đó đã kết thúc thì pthread_join() sẽ return ngay lập tức.
@@ -54,7 +54,7 @@
 >           - pthread_mutex_lock(&lock);
 >           - pthread_mutex_unlock(&lock);
 >   - **Chú ý:** Khi mutex đang bị lock bởi 1 thread, mà ở thread gọi pthread_mutex_lock() thì thread đó sẽ bị block cho đến khi mutex được unlock bởi thread lock nó.
-<br>
+>
 > - Sử dụng ***condition variables:***
 >   - Hai hoạt động chính của condition variables là signal và wait.
 >   - Khởi tạo biến *cond*:
