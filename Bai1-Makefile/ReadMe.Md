@@ -50,12 +50,12 @@
                 rm -rf main
 
 
-> **Kết quả:**
-> make rule1:               --> In ra cả 2 kết quả
->    echo "Hello im rule1"  --> In ra câu lệnh thực hiện
->    Hello im rule1         --> In ra cả kết quả.
-> make rule2:
->    Hello im rule2         --> In ra mỗi kết quả.
+ >  - **Kết quả:**</br>
+ >      - make rule1:               --> In ra cả 2 kết quả</br>
+ >          - echo "Hello im rule1"  --> In ra câu lệnh thực hiện</br>
+ >          - Hello im rule1         --> In ra cả kết quả.</br>
+ >      - make rule2:</br>
+ >          - Hello im rule2         --> In ra mỗi kết quả.</br>
         
 
 # IV. Các phép gán:
