@@ -51,11 +51,10 @@
 
 
 > **Kết quả:**
-
+>
 > make rule1:              --> In ra cả 2 kết quả
     echo "Hello im rule1"  --> In ra câu lệnh thực hiện
     Hello im rule1         --> In ra cả kết quả.
-
 > make rule2:
     Hello im rule2        --> In ra mỗi kết quả.
         
