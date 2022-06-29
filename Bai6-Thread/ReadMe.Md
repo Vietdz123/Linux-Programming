@@ -2,9 +2,9 @@
 
 > ## I. So sánh Thread và Process
 > - Khi gọi fork(), tiến trình con và tiến trình cha nằm trên 2 vùng nhớ khác nhau, hoạt động độc lập với nhau.
->   - Khi 1 tiến trình bị lỗi, crashed thì tiến trình khác vẫn hoạt động bình thường
-> - Còn khi tạo ra thread(), thì thread đó sử dụng chung vùng nhớ với Process. Khi 1 thread bị crashed sẽ khiến cho các thread bị chấm dứt.
-> - process ID là một số nguyên nhưng thread ID không nhất thiết là 1 số nguyên. Nó có thể là structure
+   - Khi 1 tiến trình bị lỗi, crashed thì tiến trình khác vẫn hoạt động bình thường
+    - Còn khi tạo ra thread(), thì thread đó sử dụng chung vùng nhớ với Process. Khi 1 thread bị crashed sẽ khiến cho các thread bị chấm dứt.
+ - process ID là một số nguyên nhưng thread ID không nhất thiết là 1 số nguyên. Nó có thể là structure
 > - process ID có thể được in ra dễ dàng nhưng thread ID thì không.
 > - **crashed:** bị hỏng, hoặc exit() (*Chứ không phải pthread_exit()*)
 
@@ -55,10 +55,10 @@
 >           - pthread_mutex_unlock(&lock);
 >   - **Chú ý:** Khi mutex đang bị lock bởi 1 thread, mà ở thread gọi pthread_mutex_lock() thì thread đó sẽ bị block cho đến khi mutex được unlock bởi thread lock nó.
 <br>
->   - Sử dụng ***condition variables:***
->       - Hai hoạt động chính của condition variables là signal và wait.
->       - Khởi tạo biến *cond*:
->           - *pthread_cond_t cond = PTHREAD_COND_INITIALIZER;*
+> - Sử dụng ***condition variables:***
+>   - Hai hoạt động chính của condition variables là signal và wait.
+>   - Khởi tạo biến *cond*:
+>       - *pthread_cond_t cond = PTHREAD_COND_INITIALIZER;*
 >       - Hai hàm được sử dụng:
 >           - int pthread_cond_signal(pthread_cond_t *cond);
 >               - Hàm này được sử dụng để unblock tối thiểu 1 thread đang bị block ở biến *cond*.
