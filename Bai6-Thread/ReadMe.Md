@@ -2,9 +2,9 @@
 
 > ## I. So sánh Thread và Process
 > - Khi gọi fork(), tiến trình con và tiến trình cha nằm trên 2 vùng nhớ khác nhau, hoạt động độc lập với nhau.
-   - Khi 1 tiến trình bị lỗi, crashed thì tiến trình khác vẫn hoạt động bình thường
-    - Còn khi tạo ra thread(), thì thread đó sử dụng chung vùng nhớ với Process. Khi 1 thread bị crashed sẽ khiến cho các thread bị chấm dứt.
- - process ID là một số nguyên nhưng thread ID không nhất thiết là 1 số nguyên. Nó có thể là structure
+>   - Khi 1 tiến trình bị lỗi, crashed thì tiến trình khác vẫn hoạt động bình thường
+>    - Còn khi tạo ra thread(), thì thread đó sử dụng chung vùng nhớ với Process. Khi 1 thread bị crashed sẽ khiến cho các thread bị chấm dứt.
+> - process ID là một số nguyên nhưng thread ID không nhất thiết là 1 số nguyên. Nó có thể là structure
 > - process ID có thể được in ra dễ dàng nhưng thread ID thì không.
 > - **crashed:** bị hỏng, hoặc exit() (*Chứ không phải pthread_exit()*)
 
