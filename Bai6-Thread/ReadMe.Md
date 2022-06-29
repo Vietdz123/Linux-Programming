@@ -24,7 +24,7 @@
 >       - *retval*: Giá trị trả về khi kết thúc thread.
 >       - Giá trị retval này có thể thu được vởi 1 thread khác thông qua *int pthread_join(pthread_t thread, void **retval);***
 >       - Trả về 0 nếu thành công, < 0 nếu thất bại.
-<br>
+> <br>
 >   - *int pthread_cancel(pthread_t thread):*
 >       - pthread_cancel() gửi 1 yêu cầu kết thúc tới 1 thread cụ thể.
 >       - Trả về 0 nếu thành công, < 0 nếu thất bại
