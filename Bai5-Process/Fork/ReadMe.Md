@@ -1,2 +1,2 @@
 # Đề bài:
-> Viết 1 tiến trình A tạo ra 2 tiến trình con B và C. Ở tiến trình B,C tạo ra 2 tiến trình D và E. Thực hiện ghi nội dung "Hello I'm B Process"(với tiến trình B và các tiến trình sau tương tự). theo thứ tự D->E->B->C vào file. Ở tiến trình A, dùng wait_pid() để xác định xem khi nào tiến trình B kết thúc thì ghi vào file.
+> - Viết 1 tiến trình A tạo ra 2 tiến trình con B và C. Ở tiến trình B,C tạo ra 2 tiến trình D và E. Thực hiện ghi nội dung "Hello I'm B Process"(với tiến trình B và các tiến trình sau tương tự). theo thứ tự D->E->B->C vào file. Ở tiến trình A, dùng wait_pid() để xác định xem khi nào tiến trình B kết thúc thì ghi vào file.
