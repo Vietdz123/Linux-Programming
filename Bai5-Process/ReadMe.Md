@@ -4,7 +4,7 @@
 ![](2022-06-27-17-26-10.png)
 
 **Memory Layout Process** được chia làm các phần như sau:
-**1. Text Segment**
+>**1. Text Segment**
 > - Là nơi chứa các đoạn mã lệnh của chương trình(Các lệnh thực thi của chương trình), các hằng số và các marcos.
 > - Vùng text Segment là Read-Only để ngăn chặn việc bị sửa đổi và là vùng có thể được chia sẻ bởi các Process khác.
 >   - Ví dụ về Sharable: Đó là gọi fork(), với kĩ thuật "copy-on-write", vùng text được sử dụng **chung tạm thời** bởi process cha và con.
@@ -18,17 +18,17 @@
 > Là một phần của không gian địa chỉ ảo của chương trình(*virtual address space*), chứa các biến toàn cục và biến tĩnh được khởi tạo bởi người lập trình.
 > DS không phải là read-only *hoàn toàn*, và giá trị của các biến có thể được thay đổi tại thời điểm run-time.
 
-> VD: Ta khởi tạo và gán giá trị các biến global, static global, hoặc static local.
-> int a = 5; 
-> char abc[] = "Hello ae wibu";     // read-write DS
-> char *hihi = "hello";             // read-only
+> VD: Ta khởi tạo và gán giá trị các biến global, static global, hoặc static local.</br>
+> int a = 5; </br>
+> char abc[] = "Hello ae wibu";     // read-write DS </br>
+> char *hihi = "hello";             // read-only      </br>
 > int main() {static int x = 6;}
 
 **3. Uninitialized Data Segment(BSS):** 
 > Data trong Segment này được Kernel khởi tạo bằng 0 trước khi chương trình bắt đầu thực thi. Segment này chứa tất cả các biến global và static được khởi tạo bằng 0 hoặc không có khởi tạo rõ ràng trong mã nguồn.
 
-> VD: int i;
-> static abc[30];
+> VD: int i;       </br>
+> static abc[30];  </br>
 
 **4. Heap:**
 > Heap là phân đoạn được sử dụng để cấp phát động.
