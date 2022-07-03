@@ -6,7 +6,6 @@
 #include <arpa/inet.h>
 
 
-
 #define BUF_SIZE 10 
 #define PORT_NUM 50002
 
